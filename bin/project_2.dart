@@ -29,15 +29,11 @@ void main() {
       var tripId = (stdin.readLineSync());
       var idInList = 0;
       list.asMap().forEach((key, value) {
-        print(value);
         if (value.containsKey('id')) ;
-        // print(value['id']);
         if (value['id'] == tripId) {
-          // print('++++++++++++++++++++');
           idInList = key;
         }
       });
-      // print('idInList $idInList');
       print('Enter New Data');
       print('ID:');
       var id = (stdin.readLineSync());
@@ -57,15 +53,11 @@ void main() {
       var tripId = (stdin.readLineSync());
       var idInList = 0;
       list.asMap().forEach((key, value) {
-        print(value);
         if (value.containsKey('id')) ;
-        // print(value['id']);
         if (value['id'] == tripId) {
-          // print('++++++++++++++++++++');
           idInList = key;
         }
       });
-      // print('idInList $idInList');
       list.remove(list[idInList]);
     }
 
@@ -82,16 +74,11 @@ void main() {
       var tripId = (stdin.readLineSync());
       var idInList = 0;
       list.asMap().forEach((key, value) {
-        print(value);
         if (value.containsKey('id')) ;
-        // print(value['id']);
         if (value['id'] == tripId) {
-          // print('++++++++++++++++++++');
           idInList = key;
         }
       });
-      // print('idInList $idInList');
-      // list.remove(list[idInList]);
       print(list[idInList]);
     }
 
