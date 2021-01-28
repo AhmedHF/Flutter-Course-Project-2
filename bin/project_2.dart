@@ -46,6 +46,7 @@ void main() {
       print('Price:');
       var price = (stdin.readLineSync());
       list[idInList] = Trip(id, location, passengers, date, price).getTrip();
+      print('done edit trip');
     }
 
     void deleteTrip() {
@@ -59,6 +60,7 @@ void main() {
         }
       });
       list.remove(list[idInList]);
+      print('Trip Removed');
     }
 
     void viewTrips() {
@@ -79,6 +81,7 @@ void main() {
           idInList = key;
         }
       });
+      print('Trip found => ');
       print(list[idInList]);
     }
 
