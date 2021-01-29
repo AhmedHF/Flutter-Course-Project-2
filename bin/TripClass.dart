@@ -5,6 +5,7 @@ class Trip {
   String date;
   String price;
   List trips = [];
+  List passenger = [];
 
   Trip(String id, String loc, String passenger, String date, String price) {
     this.id = id;
@@ -43,7 +44,8 @@ class Trip {
       'location': location,
       'passengerLimit': passengerLimit,
       'date': date,
-      'price': price
+      'price': price,
+      // 'passenger': passenger,
     };
   }
 }

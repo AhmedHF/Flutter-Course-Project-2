@@ -98,8 +98,8 @@ void main() {
           print('Done Revers it');
           var newPasssenger = int.tryParse(trip['passengerLimit']) - 1;
           print('-------- $newPasssenger');
-          list[idInList] = Trip(trip.id, trip.location,
-                  newPasssenger.toString(), trip.date, trip.price)
+          list[idInList] = Trip(trip['id'], trip['location'],
+                  newPasssenger.toString(), trip['date'], trip['price'])
               .getTrip();
         }
       }
