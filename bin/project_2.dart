@@ -80,6 +80,7 @@ void main() {
       print('Enter Trip id to reverse:');
       var tripId = (stdin.readLineSync());
       var idInList = -1;
+      var trip;
       list.asMap().forEach((key, value) {
         if (value.containsKey('id')) ;
         if (value['id'] == tripId) {
@@ -90,12 +91,13 @@ void main() {
         print('Trip Not Exist');
       } else {
         var trip = list[idInList];
-        print('---- $trip');
-        print(int.tryParse(trip.passengerLimit.toString()));
-        if (int.tryParse(trip.passengerLimit) > 0) {
+        print(trip['id']);
+        // print('---- $trip['id']');
+        print(int.tryParse(trip['passengerLimit'].toString()));
+        if (int.tryParse(trip['passengerLimit']) > 0) {
           print('Done Revers it');
-          var newPasssenger = int.tryParse(trip.passengerLimit) - 1;
-          print(newPasssenger);
+          var newPasssenger = int.tryParse(trip['passengerLimit']) - 1;
+          print('-------- $newPasssenger');
           list[idInList] = Trip(trip.id, trip.location,
                   newPasssenger.toString(), trip.date, trip.price)
               .getTrip();
@@ -142,6 +144,7 @@ void main() {
       }
     }
 
+    void viewPassenger() {}
     while (z) {
       print(
           '1- Add Trip   2-Edit Trip   3-Delete Trip     4-View Trips        5-Search Trips   \n'
