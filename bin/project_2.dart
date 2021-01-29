@@ -144,6 +144,15 @@ void main() {
       }
     }
 
+    void lastestTrips() {
+      if (list.length > 10) {
+        var lastestList = list.sublist(list.length - 10, list.length);
+        print(lastestList);
+      } else {
+        print(list);
+      }
+    }
+
     void viewPassenger() {}
     while (z) {
       print(
@@ -173,7 +182,7 @@ void main() {
           discount();
           break;
         case 8:
-          reverseList();
+          lastestTrips();
           break;
         case 9:
           reverseList();
